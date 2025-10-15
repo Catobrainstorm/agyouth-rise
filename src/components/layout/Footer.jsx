@@ -41,47 +41,47 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-300">
         {/* Main Footer */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12">
             {/* Brand Column */}
-            <div className="lg:col-span-2">
-                <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">AY</span>
+            <div className="lg:col-span-2 sm:col-span-2">
+                <div className="flex items-center mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg sm:text-xl">AY</span>
                 </div>
                 <div className="ml-3">
-                    <h3 className="text-white font-bold text-lg">AgYouth Rise</h3>
-                    <p className="text-sm text-gray-400">Nigeria</p>
+                    <h3 className="text-white font-bold text-base sm:text-lg">AgYouth Rise</h3>
+                    <p className="text-xs sm:text-sm text-gray-400">Nigeria</p>
                 </div>
                 </div>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6 leading-relaxed">
                 Empowering youth, women, and persons with disabilities through agritech, civic engagement, and sustainable agricultural development in Abia State.
                 </p>
                 
                 {/* Contact Info */}
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                 <a href="mailto:info@agyouthrise.ng" className="flex items-start hover:text-primary-400 transition-colors">
-                    <Mail className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">info@agyouthrise.ng</span>
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm break-all">info@agyouthrise.ng</span>
                 </a>
                 <a href="tel:+2348012345678" className="flex items-start hover:text-primary-400 transition-colors">
-                    <Phone className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">+234 801 234 5678</span>
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm">+234 801 234 5678</span>
                 </a>
                 <div className="flex items-start">
-                    <MapPin className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Aba, Abia State, Nigeria</span>
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm">Aba, Abia State, Nigeria</span>
                 </div>
                 </div>
             </div>
 
             {/* Links Columns */}
             <div>
-                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Organization</h4>
-                <ul className="space-y-3">
+                <h4 className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Organization</h4>
+                <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.organization.map((link) => (
                     <li key={link.name}>
-                    <a href={link.href} className="hover:text-primary-400 transition-colors text-sm">
+                    <a href={link.href} className="hover:text-primary-400 transition-colors text-xs sm:text-sm block">
                         {link.name}
                     </a>
                     </li>
@@ -90,11 +90,11 @@ const Footer = () => {
             </div>
 
             <div>
-                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Projects</h4>
-                <ul className="space-y-3">
+                <h4 className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Projects</h4>
+                <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.projects.map((link) => (
                     <li key={link.name}>
-                    <a href={link.href} className="hover:text-primary-400 transition-colors text-sm">
+                    <a href={link.href} className="hover:text-primary-400 transition-colors text-xs sm:text-sm block">
                         {link.name}
                     </a>
                     </li>
@@ -103,11 +103,11 @@ const Footer = () => {
             </div>
 
             <div>
-                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Get Involved</h4>
-                <ul className="space-y-3">
+                <h4 className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Get Involved</h4>
+                <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.getInvolved.map((link) => (
                     <li key={link.name}>
-                    <a href={link.href} className="hover:text-primary-400 transition-colors text-sm">
+                    <a href={link.href} className="hover:text-primary-400 transition-colors text-xs sm:text-sm block">
                         {link.name}
                     </a>
                     </li>
@@ -116,11 +116,11 @@ const Footer = () => {
             </div>
 
             <div>
-                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Resources</h4>
-                <ul className="space-y-3">
+                <h4 className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Resources</h4>
+                <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.resources.map((link) => (
                     <li key={link.name}>
-                    <a href={link.href} className="hover:text-primary-400 transition-colors text-sm">
+                    <a href={link.href} className="hover:text-primary-400 transition-colors text-xs sm:text-sm block">
                         {link.name}
                     </a>
                     </li>
@@ -130,19 +130,19 @@ const Footer = () => {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="mt-12 pt-12 border-t border-gray-800">
+            <div className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-gray-800">
             <div className="max-w-xl">
-                <h4 className="text-white font-semibold text-lg mb-3">Stay Updated</h4>
-                <p className="text-gray-400 mb-4">Subscribe to our newsletter for updates on training programs, events, and opportunities.</p>
-                <form className="flex gap-3">
+                <h4 className="text-white font-semibold text-base sm:text-lg mb-2 sm:mb-3">Stay Updated</h4>
+                <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">Subscribe to our newsletter for updates on training programs, events, and opportunities.</p>
+                <form className="flex flex-col sm:flex-row gap-3">
                 <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-500"
+                    className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-500 text-sm sm:text-base"
                 />
                 <button
                     type="submit"
-                    className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors duration-300"
+                    className="px-5 sm:px-6 py-2.5 sm:py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors duration-300 text-sm sm:text-base whitespace-nowrap"
                 >
                     Subscribe
                 </button>
@@ -153,10 +153,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0 gap-3 sm:gap-4">
                 {/* Copyright */}
-                <p className="text-sm text-gray-400">
+                <p className="text-xs sm:text-sm text-gray-400 text-center md:text-left">
                 © {currentYear} AgYouth Rise Nigeria. An initiative of{' '}
                 <a href="#" className="text-primary-400 hover:text-primary-300 transition-colors">
                     Orange Farm Technologies Ltd.
@@ -165,7 +165,7 @@ const Footer = () => {
                 </p>
 
                 {/* Social Links */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-3 sm:space-x-4">
                 {socialLinks.map((social) => {
                     const Icon = social.icon;
                     return (
@@ -173,9 +173,9 @@ const Footer = () => {
                         key={social.label}
                         href={social.href}
                         aria-label={social.label}
-                        className={`p-2 rounded-lg bg-gray-800 ${social.color} transition-all duration-300 hover:bg-gray-700 transform hover:scale-110`}
+                        className={`p-1.5 sm:p-2 rounded-lg bg-gray-800 ${social.color} transition-all duration-300 hover:bg-gray-700 transform hover:scale-110`}
                     >
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                     );
                 })}
