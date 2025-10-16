@@ -1,95 +1,135 @@
-import { database } from '../config/firebase';
-import { ref, push, set, onValue, remove, update } from 'firebase/database';
+import { db } from '../config/firebase';
+import { 
+  collection, 
+  addDoc, 
+  getDocs, 
+  deleteDoc, 
+  doc, 
+  query, 
+  orderBy,
+  onSnapshot,
+  serverTimestamp
+} from 'firebase/firestore';
 
 // Blog Functions
 export const createBlog = async (blogData) => {
-  const blogsRef = ref(database, 'blogs');
-  const newBlogRef = push(blogsRef);
-  
-  await set(newBlogRef, {
-    ...blogData,
-    id: newBlogRef.key,
-    createdAt: Date.now()
-  });
-  
-  return newBlogRef.key;
+  try {
+    const blogsRef = collection(db, 'blogs');
+    const docRef = await addDoc(blogsRef, {
+      ...blogData,
+      createdAt: serverTimestamp()
+    });
+    return docRef.id;
+  } catch (error) {
+    console.error('Error creating blog:', error);
+    throw error;
+  }
 };
 
 export const getAllBlogs = (callback) => {
-  const blogsRef = ref(database, 'blogs');
+  const blogsRef = collection(db, 'blogs');
+  const q = query(blogsRef, orderBy('createdAt', 'desc'));
   
-  onValue(blogsRef, (snapshot) => {
-    const data = snapshot.val();
-    const blogsArray = data 
-      ? Object.values(data).sort((a, b) => b.createdAt - a.createdAt)
-      : [];
+  return onSnapshot(q, (snapshot) => {
+    const blogsArray = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
     callback(blogsArray);
+  }, (error) => {
+    console.error('Error fetching blogs:', error);
+    callback([]);
   });
 };
 
 export const deleteBlog = async (blogId) => {
-  const blogRef = ref(database, `blogs/${blogId}`);
-  await remove(blogRef);
+  try {
+    const blogRef = doc(db, 'blogs', blogId);
+    await deleteDoc(blogRef);
+  } catch (error) {
+    console.error('Error deleting blog:', error);
+    throw error;
+  }
 };
 
 // Podcast Functions
 export const createPodcast = async (podcastData) => {
-  const podcastsRef = ref(database, 'podcasts');
-  const newPodcastRef = push(podcastsRef);
-  
-  await set(newPodcastRef, {
-    ...podcastData,
-    id: newPodcastRef.key,
-    createdAt: Date.now()
-  });
-  
-  return newPodcastRef.key;
+  try {
+    const podcastsRef = collection(db, 'podcasts');
+    const docRef = await addDoc(podcastsRef, {
+      ...podcastData,
+      createdAt: serverTimestamp()
+    });
+    return docRef.id;
+  } catch (error) {
+    console.error('Error creating podcast:', error);
+    throw error;
+  }
 };
 
 export const getAllPodcasts = (callback) => {
-  const podcastsRef = ref(database, 'podcasts');
+  const podcastsRef = collection(db, 'podcasts');
+  const q = query(podcastsRef, orderBy('createdAt', 'desc'));
   
-  onValue(podcastsRef, (snapshot) => {
-    const data = snapshot.val();
-    const podcastsArray = data 
-      ? Object.values(data).sort((a, b) => b.createdAt - a.createdAt)
-      : [];
+  return onSnapshot(q, (snapshot) => {
+    const podcastsArray = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
     callback(podcastsArray);
+  }, (error) => {
+    console.error('Error fetching podcasts:', error);
+    callback([]);
   });
 };
 
 export const deletePodcast = async (podcastId) => {
-  const podcastRef = ref(database, `podcasts/${podcastId}`);
-  await remove(podcastRef);
+  try {
+    const podcastRef = doc(db, 'podcasts', podcastId);
+    await deleteDoc(podcastRef);
+  } catch (error) {
+    console.error('Error deleting podcast:', error);
+    throw error;
+  }
 };
 
 // Gallery Functions
 export const createGalleryItem = async (galleryData) => {
-  const galleryRef = ref(database, 'gallery');
-  const newItemRef = push(galleryRef);
-  
-  await set(newItemRef, {
-    ...galleryData,
-    id: newItemRef.key,
-    createdAt: Date.now()
-  });
-  
-  return newItemRef.key;
+  try {
+    const galleryRef = collection(db, 'gallery');
+    const docRef = await addDoc(galleryRef, {
+      ...galleryData,
+      createdAt: serverTimestamp()
+    });
+    return docRef.id;
+  } catch (error) {
+    console.error('Error creating gallery item:', error);
+    throw error;
+  }
 };
 
 export const getAllGalleryItems = (callback) => {
-  const galleryRef = ref(database, 'gallery');
+  const galleryRef = collection(db, 'gallery');
+  const q = query(galleryRef, orderBy('createdAt', 'desc'));
   
-  onValue(galleryRef, (snapshot) => {
-    const data = snapshot.val();
-    const galleryArray = data 
-      ? Object.values(data).sort((a, b) => b.createdAt - a.createdAt)
-      : [];
+  return onSnapshot(q, (snapshot) => {
+    const galleryArray = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
     callback(galleryArray);
+  }, (error) => {
+    console.error('Error fetching gallery items:', error);
+    callback([]);
   });
 };
 
 export const deleteGalleryItem = async (itemId) => {
-  const itemRef = ref(database, `gallery/${itemId}`);
-  await remove(itemRef);
+  try {
+    const itemRef = doc(db, 'gallery', itemId);
+    await deleteDoc(itemRef);
+  } catch (error) {
+    console.error('Error deleting gallery item:', error);
+    throw error;
+  }
 };

@@ -9,6 +9,8 @@ import Projects from './pages/Projects';
 import Media from './pages/Media';
 import Admin from './admin/Admin';
 
+import ProtectedAdmin from './admin/ProtectedAdmin';
+
 // Import your actual media components
 import Podcast from './media/Podcast';  // ADD THIS
 import Gallery from './media/Gallery';  // ADD THIS
@@ -54,7 +56,7 @@ function App() {
           <Route path="/media/podcast" element={<Podcast />} />
           <Route path="/media/gallery" element={<Gallery />} />
 
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<ProtectedAdmin />} />
         </Routes>
       </Layout>
     </Router>
