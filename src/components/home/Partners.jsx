@@ -11,17 +11,14 @@ const Partners = () => {
     {
       id: 1,
       image: partnerOne,
-      name: 'Partner One',
     },
     {
       id: 2,
       image: partnerTwo,
-      name: 'Partner Two',
     },
     {
       id: 3,
       image: partnerThree,
-      name: 'Partner Three',
     },
   ];
 
