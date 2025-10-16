@@ -7,7 +7,7 @@ const Hero = () => {
     const [currentCaption, setCurrentCaption] = useState(0);
     
     const captions = [
-        "Raising a New Generation of Agritech-Savvy Leaders in Abia State.",
+        "Raising a New Generation of Agritech-Savvy Leaders in Nigeria.",
         "Empowering Youth, Driving Food Security, Building Communities.",
         "Inclusive Agriculture for a Sustainable Future."
     ];
