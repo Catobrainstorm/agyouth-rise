@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import partnerOne from '../../assets/Images/partner-one.webp';
+import partnerTwo from '../../assets/Images/partner-two.webp';
+import partnerThree from '../../assets/Images/partner-three.webp';
 
 const Partners = () => {
   const cardsRef = useRef([]);
@@ -7,15 +10,18 @@ const Partners = () => {
   const partnerLogos = [
     {
       id: 1,
-      image: '/src/assets/Images/partner-one.png',
+      image: partnerOne,
+      name: 'Partner One',
     },
     {
       id: 2,
-      image: '/src/assets/Images/partner-two.png',
+      image: partnerTwo,
+      name: 'Partner Two',
     },
     {
       id: 3,
-      image: '/src/assets/Images/partner-three.png',
+      image: partnerThree,
+      name: 'Partner Three',
     },
   ];
 
