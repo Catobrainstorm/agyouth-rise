@@ -246,10 +246,15 @@ const ImpactStats = () => {
                                 <TrendingUp className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                             
-                            <button className="group border-2 border-white text-white hover:bg-white hover:text-primary-700 font-bold px-10 py-5 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
+                            <a
+                                href="https://www.facebook.com/share/1Cm4ED3Ax5/?mibextid=wwXIfr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group border-2 border-white text-white hover:bg-white hover:text-primary-700 font-bold px-10 py-5 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+                            >
                                 Learn More
                                 <Sprout className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

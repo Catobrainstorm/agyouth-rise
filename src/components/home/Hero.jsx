@@ -76,29 +76,35 @@ const Hero = () => {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <button
-                                onClick={() => handleCTAClick('member')}
+                            <a
+                                href="https://forms.gle/zw21uGtW2r6T9g5f8"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
                             >
                                 Become a Member
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                             
-                            <button
-                                onClick={() => handleCTAClick('volunteer')}
+                            <a
+                                href="https://forms.gle/4VyPy18qGyECP6Lh9"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group bg-secondary-500 hover:bg-secondary-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
                             >
                                 Become a Volunteer
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                             
-                            <button
-                                onClick={() => handleCTAClick('partner')}
+                            <a
+                                href="https://wa.me/message/YBRYNL3NK5EYJ1"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group border-2 border-primary-600 text-primary-700 hover:bg-primary-600 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2"
                             >
                                 Partner With Us
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                         </div>
                     </div>
 

@@ -23,7 +23,7 @@ const Navbar = () => {
             href: '/projects',
             dropdown: [
                 { label: 'Training', href: '/projects/training', tag: 'Coming Soon' },
-                { label: 'AgYouth Rise Podcast', href: '/projects/podcast' },
+                // { label: 'AgYouth Rise Podcast', href: '/projects/podcast' },
                 { label: 'Community Clubs', href: '/projects/community-clubs' },
                 { label: 'Stakeholders Summit', href: '/projects/summit' }
             ]

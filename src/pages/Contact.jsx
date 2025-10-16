@@ -239,7 +239,7 @@ const Contact = () => {
                                     <div className="flex-1">
                                         <h4 className="font-bold text-gray-900 mb-2 text-lg">Email</h4>
                                         <a href="mailto:info@agyouthrise.ng" className="text-primary-600 hover:text-primary-700 transition-colors font-medium text-lg flex items-center gap-2 group">
-                                            info@agyouthrise.ng
+                                            agyouthriseng@gmail.com
                                             <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                                         </a>
                                     </div>
@@ -252,7 +252,7 @@ const Contact = () => {
                                     <div className="flex-1">
                                         <h4 className="font-bold text-gray-900 mb-2 text-lg">Phone</h4>
                                         <a href="tel:+2348012345678" className="text-primary-600 hover:text-primary-700 transition-colors font-medium text-lg flex items-center gap-2 group">
-                                            +234 801 234 5678
+                                            +234 906 006 8001
                                             <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                                         </a>
                                     </div>
@@ -265,7 +265,7 @@ const Contact = () => {
                                     <div className="flex-1">
                                         <h4 className="font-bold text-gray-900 mb-2 text-lg">Location</h4>
                                         <p className="text-gray-700 font-medium text-lg">
-                                            Aba, Abia State<br />
+                                            Umuahia, Abia State<br />
                                             Nigeria
                                         </p>
                                     </div>

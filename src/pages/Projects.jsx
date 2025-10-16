@@ -261,12 +261,22 @@ const Projects = () => {
                 Join us in transforming agriculture and empowering youth across Abia State
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-                Become a Member
-                </button>
-                <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-                Partner With Us
-                </button>
+                <a
+                    href="https://forms.gle/zw21uGtW2r6T9g5f8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300"
+                >
+                    Become a Member
+                </a>
+                <a
+                    href="https://wa.me/message/YBRYNL3NK5EYJ1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300"
+                >
+                    Partner With Us
+                </a>
             </div>
             </div>
         </section>

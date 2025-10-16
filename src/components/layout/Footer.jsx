@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -46,9 +47,11 @@ const Footer = () => {
             {/* Brand Column */}
             <div className="lg:col-span-2 sm:col-span-2">
                 <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg sm:text-xl">AY</span>
-                </div>
+                <img 
+                    src={logo} 
+                    alt="AgYouth Rise Nigeria Logo" 
+                    className="h-12 sm:h-14 w-auto flex-shrink-0"
+                />
                 <div className="ml-3">
                     <h3 className="text-white font-bold text-base sm:text-lg">AgYouth Rise</h3>
                     <p className="text-xs sm:text-sm text-gray-400">Nigeria</p>
@@ -62,15 +65,15 @@ const Footer = () => {
                 <div className="space-y-2 sm:space-y-3">
                 <a href="mailto:info@agyouthrise.ng" className="flex items-start hover:text-primary-400 transition-colors">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm break-all">info@agyouthrise.ng</span>
+                    <span className="text-xs sm:text-sm break-all">agyouthriseng@gmail.com</span>
                 </a>
                 <a href="tel:+2348012345678" className="flex items-start hover:text-primary-400 transition-colors">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm">+234 801 234 5678</span>
+                    <span className="text-xs sm:text-sm">+234 906 006 8001</span>
                 </a>
                 <div className="flex items-start">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm">Aba, Abia State, Nigeria</span>
+                    <span className="text-xs sm:text-sm">Umuahia, Abia State, Nigeria</span>
                 </div>
                 </div>
             </div>
